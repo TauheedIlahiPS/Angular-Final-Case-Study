@@ -1,0 +1,6 @@
+<nav>
+  <a *ngFor="let route of allRoutes" [routerLink]="[route]" [routerLinkActive]="'active'">
+    {{ route }}
+  </a>
+</nav>
+<router-outlet></router-outlet>

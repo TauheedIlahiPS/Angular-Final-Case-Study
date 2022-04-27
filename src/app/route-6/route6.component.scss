@@ -1,0 +1,14 @@
+#mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .divBox {
+    border: 2px solid gray;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+  }
+}

@@ -1,0 +1,33 @@
+<div class="main">
+  <div class="boxWrapper">
+    <div class="actions">
+      <div class="filterAction">
+        <select (change)="sortProducts()" [(ngModel)]="sortOrder">
+          <option value="0">SELECT PRICE FILTER</option>
+          <option value="1">PRICE: LOW TO HIGH</option>
+          <option value="-1">PRICE: HIGH TO LOW</option>
+        </select>
+      </div>
+      <div class="viewAction">
+        <button (click)="gridView()" [class.active]="!isListView">
+          <img src="assets/grid-view.png" />
+        </button>
+        <button (click)="listView()" [class.active]="isListView">
+          <img src="assets/list-view.png" />
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        *ngFor="let product of products"
+        class="column"
+        [class.listView]="isListView"
+        style="background-color: #aaa"
+      >
+        <img [src]="product?.imageUrl" />
+        <p>{{ product?.name }}</p>
+        <h5>Price: ₹{{ product?.price }}</h5>
+      </div>
+    </div>
+  </div>
+</div>

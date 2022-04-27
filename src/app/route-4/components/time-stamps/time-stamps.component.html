@@ -1,0 +1,4 @@
+<p *ngFor="let stamp of stampLogs">
+  {{ stamp?.paused ? 'Paused at' : 'Started at' }}
+  {{ stamp?.time | date: 'd-M-yyyy, hh:mm:ss a' | lowercase }}
+</p>

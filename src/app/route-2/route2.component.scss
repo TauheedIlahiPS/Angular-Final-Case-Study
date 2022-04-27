@@ -1,0 +1,60 @@
+.boxWrapper {
+  width: 720px;
+  border: 2px solid gray;
+  padding: 20px;
+  display: inline-block;
+  .actions {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 20px;
+    .filterAction {
+      margin-right: 20px;
+      select {
+        height: 30px;
+        border-radius: 5px;
+        padding: 0 5px;
+        font-size: 11px;
+      }
+    }
+    .viewAction {
+      border-radius: 5px;
+      border: 1px solid gray;
+      overflow: hidden;
+      margin-right: 20px;
+      button {
+        border: none;
+        width: 35px;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .active {
+        background-color: orange;
+      }
+    }
+  }
+  .row {
+    .column {
+      float: left;
+      width: calc(25% - 20px);
+      padding: 10px;
+      margin: 10px;
+      box-sizing: border-box;
+      line-height: 6px;
+      img {
+        width: 100%;
+      }
+    }
+    .column.listView {
+      width: calc(50% - 20px);
+    }
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}

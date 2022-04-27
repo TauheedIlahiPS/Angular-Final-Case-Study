@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="column">
+    <app-countdown-timer
+      [countDown]="countDownLimit"
+      (pausedAt)="onPauseTimer($event)"
+      (finishTimer)="onFinishTimer($event)"
+    ></app-countdown-timer>
+  </div>
+  <div class="column">
+    <app-timer-limit
+      (timeLimit)="setTimeLimit($event)"
+      #timerLimit
+    ></app-timer-limit>
+  </div>
+</div>
+<div class="row">
+  <div class="column noBorder">
+    <app-time-stamps [stampLogs]="stampLogs"></app-time-stamps>
+  </div>
+  <div class="column noBorder">
+    <app-clicks-count [countLogs]="countLogs"></app-clicks-count>
+  </div>
+</div>

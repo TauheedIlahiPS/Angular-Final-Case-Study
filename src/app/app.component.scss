@@ -1,0 +1,13 @@
+nav {
+  padding: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #cfcfcf;
+  a {
+    margin: 0px 10px;
+    color: #1081f3;
+    text-decoration: none;
+    &.active {
+      color: #3f3d3d;
+    }
+  }
+}

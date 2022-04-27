@@ -1,0 +1,13 @@
+<div class="timerWrapper">
+  Enter Timer Limit
+  <div class="actions">
+    <input
+      type="number"
+      [(ngModel)]="enteredLimit"
+      [disabled]="initTimer"
+    /><br />
+    <button (click)="onStartPause()">Start / Pause</button>
+    <button (click)="resetTimer()">Reset</button>
+  </div>
+</div>
+<p *ngFor="let log of pauseLogs">Paused at {{ log }}</p>

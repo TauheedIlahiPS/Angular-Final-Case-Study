@@ -1,0 +1,15 @@
+.timerWrapper {
+  display: flex;
+  .actions {
+    input {
+      margin-left: 15px;
+      margin-bottom: 20px;
+      padding: 5px 15px;
+    }
+    button {
+      margin-left: 15px;
+      padding: 5px 16px;
+      cursor: pointer;
+    }
+  }
+}
